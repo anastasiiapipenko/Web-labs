@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat Light', serif;
+    width: 100%;
+    background-image:url(img/planner2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%;
+}
+
+.nav{
+    margin-top: 100px;
+    margin-left: 30%;
+    display: flex;
+    width: 40%;
+}
+
+.nav button{
+    margin-left: 10%;
+    margin-right: 20%;
+    height: 70px;
+    outline: none;
+    background: none;
+    font-family: 'Montserrat Light', serif;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: #03053f;
+}
+
+#dash{
+    font-family: 'Montserrat SemiBold', serif;
+    border: none;
+    border-bottom: 3px #03053f;
+}
+
+#plan{
+    border: none;
+}
+
+#plan:hover{
+    color: gainsboro;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.out img{
+    width: 35px;
+    height: 35px;
+}
+
+.out{
+    margin-top: 14px;
+    position: absolute;
+    right: 5%;
+
+}
+main h1{
+    margin-top: 20px;
+    margin-left: 8%;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow:  white 1px 1px 0, #ffffff -1px -1px 0,
+                  #ffffff -1px 1px 0, white 1px -1px 0;
+}
+
+.main_blocks{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*margin-left: 8%;*/
+}
+
+.your_events{
+    margin-top: 2%;
+    width: 28%;
+}
+
+.attached_events{
+    margin-top: 2%;
+    width: 28%;
+    margin-left: 3%;
+}
+
+.your_events h3, .attached_events h3{
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow:  white 0.5px 0.5px 0, #ffffff -0.5px -0.5px 0,
+    #ffffff -0.5px 0.5px 0, white 0.5px -0.5px 0;
+}
+
+.your_events img, .attached_events img{
+    width: 15px;
+    height: 15px;
+}
+
+.event{
+    margin-top: 4%;
+    background: rgba(254, 225, 227, 0.5);
+    border-radius: 10px ;
+    transition: 200ms ease-in-out;
+}
+.event:hover {
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.event h4, p, img{
+    margin-left: 3%;
+}
+
+.date{
+    margin-right: 3%;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+.title{
+    font-size: 20px;
+    padding-top: 0;
+}
+
+.e_d{
+    margin-right: 3% ;
+    text-align: right;
+}
+
+
+@media screen and (max-width: 900px){
+    *, *:after, *:before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .main_blocks{
+        display: block;
+        margin-left: 20%;
+    }
+
+    .your_events, .attached_events{
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .nav{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 675px){
+    *, *:after, *:before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        transition: .5s ease-in-out;
+    }
+
+    header{
+        height: 60px;
+    }
+
+    .icon_img{
+        width: 25px ;
+        height: 25px;
+    }
+
+    .icon h3{
+        color: #ffffff;
+        margin-left: 1.5%;
+        font-size: 15px;
+    }
+
+    .nav{
+        margin-left: 15%;
+        display: flex;
+        width: 40%;
+    }
+
+    .nav button{
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .out img{
+        width: 25px;
+        height: 25px;
+
+    }
+    .your_events, .attached_events{
+        width: 90%;
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    *, *:after, *:before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .nav{
+        margin-left: 5%;
+        display: flex;
+        width: 40%;
+    }
+    .main_blocks{
+        margin-left: 10%;
+    }
+}

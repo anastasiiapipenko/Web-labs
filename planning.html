@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your calendar</title>
+    <link href="planning.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <form action="dashboard.html">
+                <button id="dash">DASHBOARD</button>
+            </form>
+            <button id="plan">PLANNER</button>
+        </div>
+        <div class="out">
+            <a href="index.html"><img src="img/logout.png" alt="out"></a>
+        </div>
+    </header>
+    <main>
+        <h1>Create new event</h1>
+        <form action="dashboard.html">
+            <h4>Title:</h4>
+            <div class= "form" >
+                <input type="text" class="form_control" placeholder="event's name" required>
+            </div>
+            <h4>Details:</h4>
+            <div class= "form" >
+                <input type="text" class="form_control" placeholder="description" required>
+            </div>
+            <h4>Date:</h4>
+            <div class= "form" >
+                <input type="date" class="form_control" placeholder="choose a date" required>
+            </div>
+            <h4>Member:</h4>
+            <div class="form">
+                <input type="text" class="form_control"placeholder="enter participant's email or leave the field empty">
+            </div>
+            <button type="submit">Add event</button>
+        </form>
+
+    </main>
+</body>
+</html>
