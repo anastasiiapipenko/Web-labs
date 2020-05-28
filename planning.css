@@ -56,10 +56,13 @@ body{
 }
 
 .out{
-    margin-top: 14px;
+    top: 15px;
     position: absolute;
     right: 5%;
-
+    color: #03053f;
+    background-color: #03053f;
+    border: none;
+    outline: none;
 }
 main h1{
     margin-top: 10px;
@@ -121,44 +124,8 @@ main button:active{
     cursor: pointer;
 }
 
-@media screen and (max-width: 975px){
-    *, *:after, *:before {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        transition: .5s ease-in-out;
-    }
-    main h1{
-        margin-left: 32%;
-        font-size: 45px ;
-    }
 
-    main h4 {
-        margin-left: 28%;
-        font-size: 23px;
-    }
-
-    .form{
-        margin-left: 25%;
-    }
-
-    .form_control{
-        width: 65%;
-    }
-
-    .nav{
-        width: 20%;
-        margin-left: 15%;
-    }
-
-    main button{
-        width: 30%;
-        margin-left: 35%;
-    }
-
-}
-
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
     *, *:after, *:before {
         box-sizing: border-box;
         padding: 0;
@@ -185,6 +152,7 @@ main button:active{
     }
 
     header{
+        margin-top: 30px;
         height: 60px;
     }
 
