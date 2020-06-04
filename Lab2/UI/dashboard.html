@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Your calendar</title>
+    <link href="dashboard.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
+    <!-- <script>
+        let url = 'http://127.0.0.1:8000/events/';
+        let submit = document.getElementById('submit');
+        let box = document.getElementById("organizer");
+        let input = document.getElementById("ajax");
+        function deleteEvent() {
+              $.ajax(
+                  {
+                      url: url + $("#title").val(),
+                      type: 'delete',
+                      success: function (data) {
+                          alert("Delete successful!")
+                      },
+                      error: function (error_data) {
+                          alert("Delete not successful!")
+                      }
+                  }
+              )
+          }
+    </script> -->
+    <script>
+        fetch('http://127.0.0.1:8000/events/')
+          .then(res => res.json())
+          .then((out) => {
+    
+              var str = ''
+    
+                out.forEach(function(event) {
+                str +=   `<div class="event">
+                    <h4 class="date">`+event.date+`</h4>
+                    <h4 class="title" id="title">`+event.name+`</h4>
+                    <p>`+event.description+`</p>
+                    <div class="e_d">
+                        <img  src="img/edit.png" alt="edit">
+                        <button name="Delete" onclick="deleteEvent()"><img  src="img/delete.png" alt="delete"><button>
+                    </div>
+                </div>`;
+                }); 
+              document.getElementById("listEvent").innerHTML = str;
+            })
+          .catch(err => console.log(err));
+      </script>
+
+</head>
+<body>
+    <header>
+        <button class="out" id="rect">
+            <a href="index.html"><img src="img/logout.png" alt="out"></a>
+        </button>
+        <div class="nav">
+            <button id="dash">DASHBOARD</button>
+            <form action="planning.html">
+                <button id="plan">PLANNER</button>
+            </form>
+        </div>
+
+    </header>
+    <main>
+        <div class = "main_blocks">
+            <div class="your_events" id="listEvent">
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Your calendar</title>
+    <link href="planning.css" rel="stylesheet">
+    <script>
+        let url = 'http://127.0.0.1:8000/events/';
+        let submit = document.getElementById('submit');
+        let box = document.getElementById("organizer");
+        let input = document.getElementById("ajax");
+
+        function addEvent(){
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if (xhr.status === 200 && xhr.readyState === 4) {
+                    console.log(data);
+                    console.log("success");
+            }
+            else {
+                    console.log("error");
+            }
+        };
+        xhr.send(JSON.stringify({
+            "name": $("#title").val(),
+            "description": $("#description").val(),
+            "date": $("#date").val()
+        }));
+        console.log('Event added')
+        alert("Successful!")
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <form action="dashboard.html">
+                <button id="dash">DASHBOARD</button>
+            </form>
+            <button id="plan">PLANNER</button>
+        </div>
+        <div class="out">
+            <a href="index.html"><img src="img/logout.png" alt="out"></a>
+        </div>
+    </header>
+    <main>
+        <div id="add-event1">
+        <div id="formContent">
+        <h1>Create new event</h1>
+        <form id="event_form" method="post">
+            <h4>Title:</h4>
+            <div class= "form" >
+                <input type="text" class="form_control" id="title" placeholder="event's name" required>
+            </div>
+            <h4>Details:</h4>
+            <div class= "form" >
+                <input type="text" class="form_control" id="description" placeholder="description" required>
+            </div>
+            <h4>Date:</h4>
+            <div class= "form" >
+                <input type="date" class="form_control" id="date" placeholder="choose a date" required>
+            </div>
+            <button type="submit" name="Submit" onclick="addEvent()" value="Create Event" ><a href="http://127.0.0.1:5500/dashboard.html?">Add event</a></button>
+        </form>
+        </div></div>
+    </main>
+</body>
+</html>

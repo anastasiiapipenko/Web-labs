@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your calendar</title>
+    <link href="register.css" rel="stylesheet"></title>
+</head>
+<body>
+    <main class="register">
+        <h2>Create account</h2>
+        <form action="planning.html">
+            <div class= "form" >
+                <input type="text" class="form_control" placeholder="username" id="username" required>
+            </div>
+            <div class= "form" >
+                <input type="email" class="form_control" placeholder="email" id="email" required>
+            </div>
+            <div class="form">
+                <input type="password" class="form_control"placeholder="password" id="password" required>
+            </div>
+            <div class="form">
+                <input type="password" class="form_control"placeholder="repeat password" id="password2" required>
+            </div>
+            <button type="submit" onclick="validateForm()">Sign up</button>
+        </form>
+
+        <div class="sign_in">
+            <p>Already have an account?</p> <a href="log_in.html">Sign in</a>
+        </div>
+    </main>
+</body>
+</html>
